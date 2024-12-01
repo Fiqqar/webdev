@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduKesehatan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+    <header class="bg-green-500 p-4 text-white">
+        <nav class="max-w-screen-lg mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Cek Pola Hidup</h1>
+            <a href="index.html" class="text-white hover:underline">Kembali ke Home</a>
+        </nav>
+    </header>
+
+    <section id="input" class="max-w-screen-md mx-auto p-8">
+        <h2 class="text-3xl font-semibold mb-6 text-center">Cek Pola Hidup Sehatmu</h2>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <form id="healthForm">
+                <label for="age" class="block text-lg mb-2">Masukkan Umur (tahun):</label>
+                <input type="number" id="age" name="age" placeholder="Masukkan umur mu sekarang"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-4" required>
+
+                <label for="exercise" class="block text-lg mb-2">Berapa kali per minggu kamu berolahraga?</label>
+                <input type="number" id="exercise" name="exercise" placeholder="Masukkan per minggu kamu berolahraga"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-4" required>
+
+                <label for="diet" class="block text-lg mb-2">Apakah kamu mengikuti pola makan sehat?</label>
+                <select id="diet" name="diet" class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-4" required>
+                    <option value="">Pilih</option>
+                    <option value="yes">Ya</option>
+                    <option value="no">Tidak</option>
+                </select>
+
+                <button type="submit" class="bg-green-500 text-white px-6 py-2 rounded-lg">Periksa Kesehatanmu</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="result" class="bg-gray-100 p-12 text-center hidden">
+        <h3 id="resultMessage" class="text-2xl font-semibold mb-4"></h3>
+        <button onclick="location.reload();" class="bg-green-500 text-white px-6 py-3 rounded-full text-lg">Coba
+            Lagi</button>
+    </section>
+
+    <footer class="bg-green-500 text-white text-center py-4">
+        <p>&copy; 2024 Zulfiqar Silmy Setiawan
+        <p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

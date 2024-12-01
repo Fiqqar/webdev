@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduKesehatan - Edukasi Kesehatan untuk Semua</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .animate-slide-in {
+            animation: slideIn 1s ease-out;
+        }
+    </style>
+</head>
+
+<header class="bg-green-500 p-4 text-white sticky top-0 z-50 shadow-md">
+    <nav class="max-w-screen-lg mx-auto shadow md:flex md:justify-between md:items-center">
+        <div class="flex justify-between items-center">
+            <span>
+                <h1 class="text-2xl sm:text-3xl font-bold animate-slide-in">EduKesehatan</h1>
+            </span>
+        </div>
+        <span class="text-3xl cursor-pointer md:hidden block ml-a">
+            <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+        </span>
+        <ul
+            class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-green-500 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 md:opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4"><a href="index.html" class="hover:underline">Home</a></li>
+            <li class="mx-4"><a href="about.html" class="hover:underline">About</a></li>
+            <li class="mx-4"><a href="tips.html" class="hover:underline">Health Tips</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="flex-grow">
+    <div class="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://lh6.googleusercontent.com/proxy/t2leQJpu4Oo8DG8z-Eh_1pftrAT5bVIm1U57wKgdfBzYm8K72iPmE0FDGKD07v1hiaoLVljtSecamPOmOaVXjtIJcQIiluvBqatGJsnmNwP-lD-mD4JI7Hluf6c83WHOgihXlVv-vfsRn36djQ"
+                alt="Kesehatan" class="object-cover object-center w-full h-full animate-fade-in-up" />
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-4 animate-slide-in">EduKesehatan</h1>
+            <p class="text-base sm:text-lg text-gray-300 mb-8 animate-fade-in-up">Memberikan informasi dan tips tentang
+                gaya hidup sehat yang bisa kamu terapkan setiap hari.</p>
+            <button
+                class="bg-green-500 text-white px-6 py-3 rounded-full text-lg hover:bg-green-700 hover:scale-105 transition duration-300 active:scale-90 animate-slide-in">
+                <a href="#cardSection">Mulai Edukasi</a>
+            </button>
+        </div>
+    </div>
+
+    <section id="cardSection" class="p-8">
+        <div class="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div
+                class="bg-white border border-gray-300 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <a href="cekpola.html">
+                    <img src="Untitled.png" alt="Card 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Cek Pola Hidup</h3>
+                        <p class="text-gray-700 mt-2">Klik untuk mempelajari pola hidup sehat lebih lanjut.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div
+                class="bg-white border border-gray-300 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <a href="cekbmi.html">
+                    <img src="Untitled(1).jpg" alt="Card 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Cek BMI</h3>
+                        <p class="text-gray-700 mt-2">Klik untuk mempelajari BMI kamu lebih lanjut.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-green-500 text-white text-center py-4">
+    <p>&copy; 2024 Zulfiqar Silmy Setiawan</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>
